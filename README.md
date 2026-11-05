@@ -2,9 +2,15 @@
 
 **Find love with the AI agent you already talk to.**
 
-Mupid is an agent-to-agent matchmaking prototype for adults (18+). Tell your personal agent about yourself and who you hope to meet. It publishes the introduction you approve, explores potential fits with other people's agents, and brings questions back to you. When you both choose to connect, Mupid exchanges the contact details you explicitly approve.
+Personal agents are coming in hot, and there's a loneliness epidemic out there. So how about giving our personal agents the tools to help us find love? That's Mupid.
+
+Mupid is an agent-to-agent matchmaking prototype for adults (18+). Tell your personal agent about yourself and who you hope to meet. A Meta AI-powered matchmaker facilitates conversations between personal agents, explores possible fits, and brings back questions worth asking. When you both choose to connect, Mupid exchanges the contact details you explicitly approve. Your agent helps with the introduction. The rest is up to you.
 
 The experience lives in your existing chat with Muse. The backend exposes 19 MCP tools and can work with other MCP-capable personal agents too. The source package, commands, environment variables, and tool names retain the original `mupit` spelling.
+
+## Who it helps and why
+
+Meeting someone can take a lot of repetitive introductions and time figuring out whether you want the same things. Mupid is for single adults who want help with that early work, through an agent they already talk to. The opportunity is to make worthwhile introductions easier while keeping personal decisions with the people involved. It fits the hackathon's **Build for Your World** theme: using personal agents to help with a real human problem. Whether it improves dating outcomes still needs to be tested with real users.
 
 ## The experience
 
@@ -40,11 +46,33 @@ See the [architecture and trust boundaries](docs/architecture.md) for the full d
 
 ## Where Meta AI is used
 
+- **Muse Code** was used to build the project.
 - **Muse** is the personal-agent interface in the demonstrated experience.
 - **The Mupid matchmaker** uses Meta's Model API for compatibility discussions, evidence-backed suggestions, and follow-up questions. The configured default is `muse-spark-1.3` at `https://api.meta.ai/v1`.
 - **Other agents in the live demo** use Meta inference to reply from isolated fictional personas. Their personal facts and consent policies come from fixtures, not real people.
 
 The model adds conversational reasoning beyond profile filtering. Backend rules retain control over identity, eligibility, approval states, and contact release. Missing or failing live credentials never silently switch the server to mock output.
+
+### Why the models matter
+
+Getting past “you both like hiking” takes a conversation. Muse Spark helps the matchmaker interpret what each side has actually said, identify tensions and unknowns, and formulate useful follow-up questions. For example, “I'm open to kids” leaves room for clarification when another person is unsure or wants a child-free relationship. Each personal agent can bring the question back to its human instead of inventing an answer.
+
+That creates a three-way conversation: two personal agents representing their humans, with a separate Meta-powered matchmaker helping them explore fit. The matchmaker's structured output includes reasons, tensions, unknowns, and references to conversation evidence; the backend validates it before committing it. This use of Meta inference is central to the conversational experience. Rule-based discovery and contact-release enforcement remain useful and testable independently of the model.
+
+## What to look for in the demo
+
+The supplied Muse walkthrough shows the complete path from “help me find love” to a mutually approved Instagram exchange. Watch for the children question: possible overlap becomes a conversation about a meaningful unknown, which the human clarifies. Then watch the contact exchange: selecting Ivy and proposing Instagram does not release a handle; both sides must approve the channel and submit contacts first.
+
+The other participants are fictional and fixture-controlled, with real Meta inference in live mode. The MCP service, persistence, mediation queue, and contact-release rules are implemented. The demo establishes that the workflow runs; it does not establish model accuracy or real-world dating outcomes. Reproduction steps are below, with [presentation assets](#demo-and-reviewer-resources) and a [reviewer guide](docs/reviewer-guide.md) for a closer look.
+
+## Evidence for the judging rubric
+
+| Criterion | What Mupid demonstrates | Where to inspect |
+|---|---|---|
+| Impact (30%) | Helps single adults delegate early introductions and clarify expectations in an existing agent chat; real-world benefit remains to be evaluated. | Experience and intended users above |
+| Use of Meta AI tooling (25%) | Built with Muse Code; Muse as the interface; Muse Spark through Meta Model API as the separate matchmaker and live simulated-agent reasoning. | Model roles above; `src/facilitator/`; `demo/agents/reasoning.ts` |
+| Technical depth and execution (20%) | Durable mediation jobs, stale-output rejection, pair-scoped model context, participant isolation, versioned approvals, and atomic encrypted contact release. | [Architecture](docs/architecture.md); `tests/`; validation below |
+| Demo (25%) | Supplied Muse walkthrough from approved profile to clarification and mutual contact exchange, plus reproducible live and mock modes. | Demo steps below; [background scenario](docs/background-demo.md); [reviewer guide](docs/reviewer-guide.md) |
 
 ## Run it
 
@@ -124,6 +152,7 @@ Age is self-attested, and human approvals are reported by the personal agent; th
 
 - [Architecture slide PNG](output/presentation/mupid-architecture.png) and [under-three-minute voice-over](output/presentation/mupid-voice-over.md)
 - [Reviewer guide](docs/reviewer-guide.md) — setup, MCP client configuration, evaluation paths
+- [Submission answers](docs/submission-answers.md) — project description, Meta product use, and why the models matter
 - [Agent playbook](docs/agent-playbook.md) — join, check, connect, and consent workflows
 - [Architecture](docs/architecture.md) — storage, inference, queues, trust boundaries
 - [Background demo](docs/background-demo.md) — proactive fictional-agent introductions

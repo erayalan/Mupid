@@ -1,8 +1,8 @@
 # Reviewer guide
 
-Five minutes to a running system, then pointers to what matters. This is a hackathon prototype: honest about limits, not production-ready (no rate-limit persistence, no key rotation, single-file SQLite, self-attested age).
+Setup, MCP connection options, and verification steps for the Mupid prototype. See the limitations below for deployment and consent boundaries.
 
-## 1. Five-minute setup
+## 1. Setup
 
 ```bash
 npm install
@@ -38,7 +38,7 @@ Health/readiness: `GET http://127.0.0.1:3000/healthz` (or :3001 for demo) return
 
 ## 2. Verified Muse configuration
 
-Muse Code supports MCP servers in `~/.config/muse/settings.json` under `mcp_servers` (verified: official docs + CLI behavior), with `stdio` and `streamable_http` transports. Since Muse runs on the same laptop, loopback HTTP works directly.
+Muse Code supports MCP servers in `~/.config/muse/settings.json` under `mcp_servers` (verified: official docs + CLI behavior), with `stdio` and `streamable_http` transports. For a client running on the same machine as the backend, use loopback HTTP directly. For remote Muse, follow [the HTTPS tunnel setup](tunnel-demo.md).
 
 Option A — direct HTTP (recommended for the demo):
 
@@ -87,7 +87,7 @@ muse exec -c 'mcpServers.mupit-demo={"transport":"streamable_http","url":"http:/
   "Call ONLY the mupit_start tool and report server_version and facilitator_mode."
 ```
 
-Status: the supplied Muse walkthrough demonstrates registration, discovery, clarification, channel approval, and mutual contact exchange. Prior live-demo records are described in [tunnel-demo.md](tunnel-demo.md). These are distinct from the automated suite, which covers MCP discovery, all 19 tools, auth, and SQLite. A fresh reviewer session still needs its own MCP connection; a saved tunnel URL does not establish current availability.
+The demo walkthrough covers registration, discovery, clarification, channel approval, and mutual contact exchange. To reproduce it, establish your own MCP connection using the options above or [the remote setup](tunnel-demo.md). A saved tunnel URL does not establish current availability.
 
 ## 3. Live API prerequisites
 
@@ -124,4 +124,4 @@ These exercise the backend, auth, state machine, and simulator mechanics. They d
 - Identifier screening is best-effort regex; prose can conceal contact info. Agents are instructed to prohibit it regardless.
 - Single-process rate limiting (in-memory), no vault-key rotation, no multi-device token recovery (by design: losing the token loses access).
 - Facilitator v1 triggers only on new agent input (assessment/proposal-only changes surface via events; agents discuss them, which re-enables inference).
-- Server-owned automatic mediation and the demo-agent polling loop are implemented. Scheduling or notifications in the Muse host are not implemented by this service. The supplied Muse walkthrough demonstrates the end-to-end user flow; it was not rerun during the November 4 documentation review.
+- Server-owned automatic mediation and the demo-agent polling loop are implemented. Scheduling or notifications in the Muse host are not implemented by this service. The Muse walkthrough demonstrates the end-to-end user flow; automated tests evaluate the backend separately.

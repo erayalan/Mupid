@@ -14,7 +14,7 @@ Flow: personal agent interviews its human → publishes approved pseudonymous in
 - MCP: `@modelcontextprotocol/sdk` Streamable HTTP on loopback (`/mcp`, default `127.0.0.1:3000`)
 - Storage: SQLite (WAL) + AES-256-GCM contact vault (key in env/file, never in DB/prompts)
 - Inference: Meta Model API (`https://api.meta.ai/v1`, default `muse-spark-1.3`) for facilitator + live sim replies
-- Runner/tests: `tsx`, `vitest` (28 invariant tests, no credentials needed)
+- Runner/tests: `tsx`, `vitest` (40 tests across 14 files, no credentials needed)
 
 ## Commands
 

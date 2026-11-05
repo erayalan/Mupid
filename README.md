@@ -10,7 +10,7 @@ The experience lives in your existing chat with Muse. The backend exposes 19 MCP
 
 ## Who it helps and why
 
-Meeting someone can take a lot of repetitive introductions and time figuring out whether you want the same things. Mupid is for single adults who want help with that early work, through an agent they already talk to. The opportunity is to make worthwhile introductions easier while keeping personal decisions with the people involved. It fits the hackathon's **Build for Your World** theme: using personal agents to help with a real human problem. Whether it improves dating outcomes still needs to be tested with real users.
+Meeting someone can take a lot of repetitive introductions and time figuring out whether you want the same things. Mupid is for single adults who want help with that early work, through an agent they already talk to. The opportunity is to make worthwhile introductions easier while keeping personal decisions with the people involved. Whether it improves dating outcomes still needs to be tested with real users.
 
 ## The experience
 
@@ -20,7 +20,7 @@ Meeting someone can take a lot of repetitive introductions and time figuring out
 4. **Choose a connection.** You choose a person and a communication channel. A counterproposal requires fresh approval.
 5. **Exchange details.** Both sides must approve the current channel and submit their contacts before either contact is released. Mupid does not send Instagram DMs or emails. The rest is up to you.
 
-In the supplied Muse walkthrough, a fictional Portland persona explores Mira, Ivy, and Elena, clarifies openness to children, and exchanges Instagram handles with Ivy. Those participants and their approvals are simulated; this demonstrates the workflow, not successful real-world matchmaking.
+In the demo walkthrough, a fictional Portland persona explores Mira, Ivy, and Elena, clarifies openness to children, and exchanges Instagram handles with Ivy. The other participants are fictional, with simulated answers and approvals.
 
 ## How it works
 
@@ -61,9 +61,9 @@ That creates a three-way conversation: two personal agents representing their hu
 
 ## What to look for in the demo
 
-The supplied Muse walkthrough shows the complete path from “help me find love” to a mutually approved Instagram exchange. Watch for the children question: possible overlap becomes a conversation about a meaningful unknown, which the human clarifies. Then watch the contact exchange: selecting Ivy and proposing Instagram does not release a handle; both sides must approve the channel and submit contacts first.
+The Muse walkthrough shows the complete path from “help me find love” to a mutually approved Instagram exchange. Watch for the children question: possible overlap becomes a conversation about a meaningful unknown, which the human clarifies. Then watch the contact exchange: selecting Ivy and proposing Instagram does not release a handle; both sides must approve the channel and submit contacts first.
 
-The other participants are fictional and fixture-controlled, with real Meta inference in live mode. The MCP service, persistence, mediation queue, and contact-release rules are implemented. The demo establishes that the workflow runs; it does not establish model accuracy or real-world dating outcomes. Reproduction steps are below, with [presentation assets](#demo-and-reviewer-resources) and a [reviewer guide](docs/reviewer-guide.md) for a closer look.
+The demo uses the implemented MCP service, persistence, mediation queue, and contact-release rules, with real Meta inference in live mode. Follow the reproduction steps below or see the [reviewer guide](docs/reviewer-guide.md) for a closer look.
 
 ## Run it
 
@@ -123,7 +123,7 @@ Health: `GET /healthz` on the backend port. A healthy service or configured API 
 
 | Component | Demo status |
 |---|---|
-| Personal-agent experience | Real Muse walkthrough supplied with the demo |
+| Personal-agent experience | Muse personal-agent walkthrough |
 | MCP tools, authentication, persistence, contact exchange | Implemented backend |
 | Matchmaker | Real Meta inference in live mode; explicit mock in rehearsal mode |
 | Other participants | Fictional seeded adults |
@@ -135,7 +135,7 @@ Health: `GET /healthz` on the backend port. A healthy service or configured API 
 
 Verified on November 4, 2026: type checking, build, and **40 tests across 14 files**, including real HTTP socket tests. Coverage includes all 19 MCP tools, authentication and isolation, reciprocal discovery, persistence and retries, proposal versions, mutual contact release, vault failures, facilitator context restrictions, automatic mediation/recovery, simulated-agent provenance, and tunnel host/origin restrictions. Socket tests can return early in environments that prohibit listening; use a normal development environment or CI to exercise them.
 
-The supplied Muse walkthrough and prior live-demo records demonstrate the end-to-end flow. The verification above did not make new live Meta calls or rerun the Muse conversation. Compatibility quality, user outcomes, and production scalability have not been evaluated.
+The automated suite uses model mocks. Live inference can be checked separately with the smoke-test command above. Compatibility quality, user outcomes, and production scalability have not been evaluated.
 
 Age is self-attested, and human approvals are reported by the personal agent; the backend cannot independently prove who gave an approval. Contact screening in free text is best-effort. Rate limits are in-memory; key rotation and token recovery are not implemented. Hosted deployment, production abuse controls, and Muse-scheduled check-ins/notifications remain future work. This is a hackathon prototype, not a production dating service.
 
@@ -143,14 +143,12 @@ Age is self-attested, and human approvals are reported by the personal agent; th
 
 - [Architecture slide PNG](output/presentation/mupid-architecture.png) and [under-three-minute voice-over](output/presentation/mupid-voice-over.md)
 - [Reviewer guide](docs/reviewer-guide.md) — setup, MCP client configuration, evaluation paths
-- [Submission answers](docs/submission-answers.md) — project description, Meta product use, and why the models matter
 - [Agent playbook](docs/agent-playbook.md) — join, check, connect, and consent workflows
 - [Architecture](docs/architecture.md) — storage, inference, queues, trust boundaries
 - [Background demo](docs/background-demo.md) — proactive fictional-agent introductions
 - [Remote Muse setup](docs/tunnel-demo.md) — HTTPS tunnel and connectivity checks
-- [Demo storyboard](docs/demo-script.md) — additional scenes, including mismatch and channel negotiation
 
-Built for the [Meta Global AI Developer Hackathon](https://cerebralvalley.ai/e/meta-ai-developer-hackathon/details). The project explores helping adults navigate introductions through personal agents, with Meta reasoning used for the conversation and explicit approval enforced in code. Real-world impact remains a hypothesis to test with users.
+Built for the [Meta Global AI Developer Hackathon](https://cerebralvalley.ai/e/meta-ai-developer-hackathon/details).
 
 ## License
 

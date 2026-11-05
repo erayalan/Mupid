@@ -1,15 +1,13 @@
 # Use Mupit from a remote Muse chat
 
-The tunnel was started with explicit user approval on October 29, 2026. Public
-MCP discovery returned 19 tools, and `mupit_start` returned version `0.1.0` in
-`live` mode. See `demo/state/tunnel.json` for the most recently verified endpoint.
+Use the demo tunnel to connect a remote Muse session to the MCP backend. The launcher verifies tool discovery and `mupit_start` before printing the HTTPS endpoint. Connection metadata is saved to the gitignored `demo/state/tunnel.json`; a fresh checkout creates it when the launcher runs.
 
 ## Start
 
-Keep the existing local demo server running on port 3001. For future runs:
+Start the demo server on port 3001:
 
 ```bash
-npm run demo:up -- --live
+npm run demo:up -- --live --background
 ```
 
 In a second terminal:
@@ -39,8 +37,7 @@ set `MUPIT_TUNNEL_HOST` to the exact hostname of the verified endpoint in `.env`
 and restart `demo:up`. Do not include a scheme, path, port, or wildcard. The
 server accepts that one Host and its HTTPS Origin in addition to loopback;
 unrelated hosts and origins remain blocked, and the listening address stays
-loopback-only. The current demo's hostname has been configured. Keep it in sync
-if the tunnel hostname changes. The tunnel launcher still requests Host rewriting
+loopback-only. Keep this setting in sync if the tunnel hostname changes. The tunnel launcher still requests Host rewriting
 and keeps request inspection disabled.
 
 ## Give the URL to remote Muse
@@ -68,12 +65,7 @@ publication, channel, and contact-release approvals.
 
 ## Live inference prerequisite
 
-Billing was fixed on October 29, 2026. Actual live `muse-spark-1.3`
-facilitator output has since been committed through MCP, and live fictional-agent
-replies have been observed. The completion budget was raised to 8,192 tokens to
-allow for internal reasoning before the JSON reply. Earlier HTTP 402 failures
-are historical. A future startup check alone still cannot establish inference
-readiness; verify an actual facilitator result when diagnosing the service.
+Live inference requires a valid Meta API key and available credits/billing. The facilitator and live-agent completion budgets allow for internal reasoning before the JSON reply. Check an actual facilitator result to verify inference readiness; a healthy endpoint alone is not sufficient.
 
 To choose a simulated rehearsal explicitly, stop the live demo server and run:
 

@@ -3,26 +3,14 @@
 For the "find me love / check back / choose from three" background flow, use
 [background-demo.md](background-demo.md).
 
-Verified on October 29, 2026: the live background server runs at
-`http://127.0.0.1:3001/mcp`, with proactive fictional-agent introductions enabled.
-The existing HTTPS tunnel also reports `facilitator_mode: live` and
-`background_demo: true`.
-
-Billing is fixed and actual Meta inference succeeds. The initial 1,200-token
-completion limit was too small: internal reasoning exhausted it before any
-answer text. The facilitator and live simulated-agent budgets are now 8,192
-tokens; response text remains separately bounded. Actual live facilitator output
-was committed through MCP using `muse-spark-1.3`, and the background worker has
-posted a real model-generated agent reply. Earlier billing errors below or in
-historical notes do not describe the current state. No mock fallback is enabled.
-Live questions may still need human answers before a recommendation is possible.
+Start the demo with `npm run demo:up -- --live --background`. It serves MCP at `http://127.0.0.1:3001/mcp` and enables proactive fictional-agent introductions. Live inference requires a working Meta API key and available credits. Questions may need human answers before a recommendation is possible. For remote Muse access, follow [tunnel-demo.md](tunnel-demo.md).
 
 ## 1. Open Muse
 
 In a terminal:
 
 ```bash
-cd /Users/erayalan/Documents/Mupid
+cd /path/to/Mupid
 muse -c 'mcpServers.mupit-demo={"transport":"streamable_http","url":"http://127.0.0.1:3001/mcp"}'
 ```
 
@@ -115,7 +103,7 @@ For future live runs, start this in one terminal and keep it running, then open
 Muse in another. Do not start a second server while port 3001 is occupied.
 
 ```bash
-cd /Users/erayalan/Documents/Mupid
+cd /path/to/Mupid
 npm run demo:up -- --live
 ```
 

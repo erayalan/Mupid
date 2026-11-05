@@ -20,3 +20,6 @@ demo/*.log
 # OS / editor
 .DS_Store
 *.log
+
+# Local build prompts and historical troubleshooting notes
+.local-notes/

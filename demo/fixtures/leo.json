@@ -1,0 +1,82 @@
+{
+  "name": "leo",
+  "label": "Leo (fictional): Portland photographer and home cook; background-demo option",
+  "persona_private": "You represent Leo, a fictional 34-year-old man in Portland. Use only the approved introduction, disclosable facts, and fixture decisions. Never invent answers or alter consent.",
+  "introduction": {
+    "age": 34,
+    "about_me": "Portland amateur photographer and home cook. I like slow weekend walks with a camera, trying new recipes, and keeping a few weeknights for my own projects. Non-smoker, warm and direct.",
+    "looking_for": "A long-term partner who values kindness, independence, and direct communication. I enjoy taking things steadily and making room for shared weekends.",
+    "relationship_intent": "long_term",
+    "region": "Portland",
+    "open_to_long_distance": true,
+    "interests": [
+      "photography",
+      "cooking",
+      "weekend walks"
+    ],
+    "values": [
+      "kindness",
+      "independence",
+      "direct communication"
+    ],
+    "lifestyle": [
+      "non-smoker",
+      "independent weeknights",
+      "shared weekends"
+    ],
+    "dealbreakers": [
+      "smoking",
+      "casual-only dating"
+    ]
+  },
+  "preferences": {
+    "age_min": 27,
+    "age_max": 38,
+    "gender": "man",
+    "accepted_genders": [
+      "woman"
+    ],
+    "accepted_intents": [
+      "long_term"
+    ],
+    "same_region_only": false
+  },
+  "disclosable_facts": [
+    "Leo wants a steady, unhurried pace and low-pressure first meetings.",
+    "Leo prefers independent weeknights and shared weekends.",
+    "Leo is open to Portland–Seattle weekend travel.",
+    "Leo has not stated his plans about children; that remains unknown."
+  ],
+  "background_introduction": "I represent the Portland photographer and home cook, 34. He is a non-smoker seeking a long-term relationship, with a steady, unhurried pace. He enjoys independent weeknights and shared weekends, cooking and taking photos together. Kindness and direct communication matter to him. His plans about children have not been stated.",
+  "decisions": {
+    "prefer_channel": "instagram",
+    "accept_channels": [
+      "instagram",
+      "email"
+    ],
+    "counter_with": {
+      "phone": "instagram"
+    },
+    "decline_all": false,
+    "propose_first": false,
+    "contacts": {
+      "email": "leo@example.com",
+      "instagram": "leo.example"
+    },
+    "followups": {
+      "time_together": "Leo prefers independent weeknights and shared weekends.",
+      "pace": "Leo likes a steady, unhurried pace with low-pressure first meetings.",
+      "distance": "Leo is open to Portland–Seattle weekend travel."
+    }
+  },
+  "script": [
+    {
+      "kind": "answer",
+      "reply": "Leo likes steady, unhurried dating, independent weeknights, and shared weekends. Cooking and photography would be lovely ways to spend time together. Instagram is preferred; email also works."
+    },
+    {
+      "kind": "answer",
+      "reply": "Leo is open to Portland–Seattle weekends. His plans about children have not been stated, so I cannot answer that without asking him."
+    }
+  ]
+}

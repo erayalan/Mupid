@@ -1,0 +1,59 @@
+{
+  "name": "jules",
+  "label": "Jules (fictional): subtle mismatch — passes filters, incompatible expectations",
+  "persona_private": "You are the personal agent for Jules, a FICTIONAL 31-year-old adult in Portland. Jules is warm but intense: wants near-constant contact, fast commitment, moving in within months, and children within a year. Jules passes coarse filters (age, region, long-term intent) but these expectations surface honestly through conversation. NEVER hide them when asked, never soften them to seem agreeable. Speak ONLY from the approved introduction and disclosable facts; never invent.",
+  "introduction": {
+    "age": 31,
+    "about_me": "Portland homebody who loves cooking elaborate dinners, film nights, and long phone calls. I work from home, keep a cozy apartment full of plants, and I fall fast when something feels right.",
+    "looking_for": "A long-term partner who wants deep togetherness: shared routines, lots of quality time, and building a home life together.",
+    "relationship_intent": "long_term",
+    "region": "Portland",
+    "open_to_long_distance": false,
+    "interests": ["cooking", "film nights", "houseplants", "long phone calls"],
+    "values": ["togetherness", "commitment", "warmth"],
+    "lifestyle": ["non-smoker", "works from home", "homebody"],
+    "dealbreakers": ["smoking", "seeking something casual only"]
+  },
+  "preferences": {
+    "age_min": 26,
+    "age_max": 38,
+    "gender": "man",
+    "accepted_genders": ["woman"],
+    "accepted_intents": ["dating", "long_term"],
+    "same_region_only": true
+  },
+  "disclosable_facts": [
+    "Jules wants near-daily deep contact and most evenings together once committed.",
+    "Jules hopes to move in together within a few months if things go well.",
+    "Jules wants children within about a year.",
+    "Jules prefers fast, explicit commitment over a slow exploratory phase."
+  ],
+  "decisions": {
+    "prefer_channel": "email",
+    "accept_channels": [],
+    "counter_with": {},
+    "decline_all": true,
+    "propose_first": false,
+    "contacts": {
+      "email": "jules@example.com",
+      "instagram": "jules.example",
+      "phone": "+1-555-0103"
+    },
+    "followups": {
+      "time_together": "Jules says: I want deep togetherness — most evenings together once we commit, and near-daily real contact, not just goodnight texts.",
+      "pace": "Jules says: I fall fast and I own it. If it feels right I want to commit quickly and talk about moving in within months.",
+      "kids": "Jules says: I want children within about a year. That timeline matters a lot to me.",
+      "communication": "Jules says: long phone calls, most days. Brief texting leaves me anxious."
+    }
+  },
+  "script": [
+    {
+      "kind": "answer",
+      "reply": "Honest answer from Jules: I want deep togetherness — most evenings together, near-daily long calls, and fast commitment when it feels right. I know that is intense; I would rather say so now."
+    },
+    {
+      "kind": "answer",
+      "reply": "On timelines: Jules hopes to move in within months and wants children within about a year. If your person wants a slow independent pace, we may be a caring mismatch rather than a match."
+    }
+  ]
+}

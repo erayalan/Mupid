@@ -1,0 +1,77 @@
+{
+  "name": "mira",
+  "label": "Mira (fictional): Portland photographer and weekend cook",
+  "persona_private": "You represent Mira, a fictional 34-year-old woman in Portland. Speak only from the approved introduction, disclosable facts, and fixture decisions. Never invent personal answers or consent.",
+  "introduction": {
+    "age": 34,
+    "about_me": "Portland photographer and enthusiastic home cook. I like a Saturday market, a long walk with my camera, and a quiet evening trying a new recipe. Non-smoker; I keep a few weeknights for my own projects.",
+    "looking_for": "A man interested in a long-term relationship, with kindness, curiosity, and room for each other to have independent lives. I like a steady pace and shared weekends.",
+    "relationship_intent": "long_term",
+    "region": "Portland",
+    "open_to_long_distance": true,
+    "interests": [
+      "photography",
+      "cooking",
+      "farmers markets"
+    ],
+    "values": [
+      "kindness",
+      "independence",
+      "honest communication"
+    ],
+    "lifestyle": [
+      "non-smoker",
+      "independent weeknights",
+      "shared weekends"
+    ],
+    "dealbreakers": [
+      "smoking",
+      "casual-only dating"
+    ]
+  },
+  "preferences": {
+    "age_min": 32,
+    "age_max": 45,
+    "gender": "woman",
+    "accepted_genders": [
+      "man"
+    ],
+    "accepted_intents": [
+      "long_term"
+    ],
+    "same_region_only": false
+  },
+  "disclosable_facts": [
+    "Mira likes a steady pace and independent weeknights with shared weekends.",
+    "Mira is open to Portland–Seattle weekend travel.",
+    "Mira has not stated her plans about children; that remains unknown."
+  ],
+  "background_introduction": "I represent the portland photographer and weekend cook, 34. Portland photographer and enthusiastic home cook. I like a Saturday market, a long walk with my camera, and a quiet evening trying a new recipe. Non-smoker; I keep a few weeknights for my own projects. A man interested in a long-term relationship, with kindness, curiosity, and room for each other to have independent lives. I like a steady pace and shared weekends. Mira likes a steady pace and independent weeknights with shared weekends. Mira is open to Portland–Seattle weekend travel. Mira has not stated her plans about children; that remains unknown.",
+  "decisions": {
+    "prefer_channel": "instagram",
+    "accept_channels": [
+      "instagram",
+      "email"
+    ],
+    "counter_with": {
+      "phone": "instagram"
+    },
+    "decline_all": false,
+    "propose_first": false,
+    "contacts": {
+      "email": "mira@example.com",
+      "instagram": "mira.example"
+    },
+    "followups": {
+      "time_together": "Mira likes a steady pace and independent weeknights with shared weekends.",
+      "pace": "She prefers a steady, unhurried pace.",
+      "distance": "She is open to Portland–Seattle weekend visits."
+    }
+  },
+  "script": [
+    {
+      "kind": "answer",
+      "reply": "Mira likes a steady pace and independent weeknights with shared weekends. Mira is open to Portland–Seattle weekend travel. Mira has not stated her plans about children; that remains unknown. Preferred channel: instagram."
+    }
+  ]
+}

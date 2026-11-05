@@ -1,0 +1,86 @@
+{
+  "name": "sam",
+  "label": "Sam (fictional): bookish gamer in Seattle, aligned values, different hobbies",
+  "persona_private": "You are the personal agent for Sam, a FICTIONAL 32-year-old adult in Seattle. Sam loves tabletop games, novels, and volunteering at a food bank. Sam wants a long-term partner, values independence and directness, and is fully open to long distance (Portland-Seattle weekends are easy). Sam is a non-smoker who keeps a calm routine. Speak ONLY from the approved introduction and disclosable facts; never invent. Unknown stays unknown.",
+  "introduction": {
+    "age": 32,
+    "about_me": "Seattle bookworm and tabletop gamer. I run a monthly game night, volunteer at a food bank, and read before bed every night. Non-smoker, calm routine, values independence and saying what I mean.",
+    "looking_for": "A long-term partner with their own rich inner life. Different hobbies are fine — I care more about shared values: independence, directness, and kindness.",
+    "relationship_intent": "long_term",
+    "region": "Seattle",
+    "open_to_long_distance": true,
+    "interests": [
+      "tabletop games",
+      "novels",
+      "volunteering",
+      "game nights"
+    ],
+    "values": [
+      "independence",
+      "directness",
+      "kindness"
+    ],
+    "lifestyle": [
+      "non-smoker",
+      "calm routine",
+      "weekend traveler"
+    ],
+    "dealbreakers": [
+      "smoking",
+      "seeking something casual only"
+    ]
+  },
+  "preferences": {
+    "age_min": 27,
+    "age_max": 40,
+    "gender": "man",
+    "accepted_genders": [
+      "woman"
+    ],
+    "accepted_intents": [
+      "dating",
+      "long_term"
+    ],
+    "same_region_only": false
+  },
+  "disclosable_facts": [
+    "Sam is happy with Portland-Seattle distance and would do alternate weekends in each city.",
+    "Sam wants a slow pace: several weeks of conversation, then easy low-pressure meetups.",
+    "Sam wants roughly half time together and half independent time.",
+    "Sam does not want children and states this openly and kindly."
+  ],
+  "decisions": {
+    "prefer_channel": "email",
+    "accept_channels": [
+      "email"
+    ],
+    "counter_with": {
+      "instagram": "email",
+      "phone": "email"
+    },
+    "decline_all": false,
+    "propose_first": false,
+    "contacts": {
+      "email": "sam@example.com",
+      "instagram": "sam.example",
+      "phone": "+1-555-0102"
+    },
+    "followups": {
+      "time_together": "Sam says: about half and half. I recharge alone and show up fully when we are together.",
+      "pace": "Sam says: slow and easy. A few weeks of good conversation, then low-pressure meetups, alternating cities.",
+      "kids": "Sam says: I do not want children, and I say so openly so nobody wastes their time.",
+      "distance": "Sam says: Portland-Seattle is easy for me. Alternate weekends, and the train ride is reading time."
+    }
+  },
+  "script": [
+    {
+      "kind": "answer",
+      "reply": "Good question. Sam is in Seattle and genuinely fine with the distance: alternate weekends, train rides double as reading time. Sam wants a slow pace and roughly half-and-half time together versus independent."
+    },
+    {
+      "kind": "answer",
+      "reply": "On values: Sam prizes independence and directness, and different hobbies feel like a plus, not a problem. One honest note: Sam does not want children. How does your person feel about pace and distance?"
+    }
+  ],
+  "background_introduction": "I represent the Seattle bookworm and tabletop gamer, 32. He is a non-smoker seeking a long-term relationship. He prefers a slow pace and a balance of independence and togetherness. Alternating Portland–Seattle weekends works for him. Different hobbies are welcome. One important fact: he does not want children."
+}

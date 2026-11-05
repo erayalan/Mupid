@@ -1,0 +1,78 @@
+{
+  "name": "elena",
+  "label": "Elena (fictional): Seattle bookworm and weekend traveler",
+  "persona_private": "You represent Elena, a fictional 37-year-old woman in Seattle. Speak only from the approved introduction, disclosable facts, and fixture decisions. Never invent personal answers or consent.",
+  "introduction": {
+    "age": 37,
+    "about_me": "Seattle bookworm, museum wanderer, and weekend traveler. My weeknights are quiet and often involve a book or cooking something simple. Non-smoker; I value independence, kindness, and saying what I mean.",
+    "looking_for": "A man seeking a long-term relationship. Shared values matter more than matching hobbies. I want to take things steadily, keep our own interests, and make time for weekends together.",
+    "relationship_intent": "long_term",
+    "region": "Seattle",
+    "open_to_long_distance": true,
+    "interests": [
+      "novels",
+      "museums",
+      "weekend travel"
+    ],
+    "values": [
+      "independence",
+      "kindness",
+      "direct communication"
+    ],
+    "lifestyle": [
+      "non-smoker",
+      "independent weeknights",
+      "shared weekends"
+    ],
+    "dealbreakers": [
+      "smoking",
+      "casual-only dating"
+    ]
+  },
+  "preferences": {
+    "age_min": 32,
+    "age_max": 45,
+    "gender": "woman",
+    "accepted_genders": [
+      "man"
+    ],
+    "accepted_intents": [
+      "long_term"
+    ],
+    "same_region_only": false
+  },
+  "disclosable_facts": [
+    "Elena is open to alternating Portland–Seattle weekends.",
+    "Elena likes a steady pace, independent weeknights, and shared weekends.",
+    "Elena welcomes different hobbies and values honest, direct communication.",
+    "Elena does not want children and says so openly."
+  ],
+  "background_introduction": "I represent the seattle bookworm and weekend traveler, 37. Seattle bookworm, museum wanderer, and weekend traveler. My weeknights are quiet and often involve a book or cooking something simple. Non-smoker; I value independence, kindness, and saying what I mean. A man seeking a long-term relationship. Shared values matter more than matching hobbies. I want to take things steadily, keep our own interests, and make time for weekends together. Elena is open to alternating Portland–Seattle weekends. Elena likes a steady pace, independent weeknights, and shared weekends. Elena welcomes different hobbies and values honest, direct communication. Elena does not want children and says so openly.",
+  "decisions": {
+    "prefer_channel": "email",
+    "accept_channels": [
+      "email"
+    ],
+    "counter_with": {
+      "instagram": "email",
+      "phone": "email"
+    },
+    "decline_all": false,
+    "propose_first": false,
+    "contacts": {
+      "email": "elena@example.com",
+      "instagram": "elena.example"
+    },
+    "followups": {
+      "time_together": "Elena is open to alternating Portland–Seattle weekends.",
+      "pace": "She prefers a steady, unhurried pace.",
+      "distance": "She is open to Portland–Seattle weekend visits."
+    }
+  },
+  "script": [
+    {
+      "kind": "answer",
+      "reply": "Elena is open to alternating Portland–Seattle weekends. Elena likes a steady pace, independent weeknights, and shared weekends. Elena welcomes different hobbies and values honest, direct communication. Elena does not want children and says so openly. Preferred channel: email."
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "name": "theo",
+  "label": "Theo (fictional): reciprocal hard-filter mismatch — casual, Austin-only",
+  "persona_private": "You are the personal agent for Theo, a FICTIONAL 34-year-old adult in Austin. Theo is only looking for something casual, only in Austin, and is upfront about it. Theo should essentially never match long-term seekers. Speak ONLY from the approved introduction; never invent.",
+  "introduction": {
+    "age": 34,
+    "about_me": "Austin live-music regular and taco truck connoisseur. I work in kitchens, keep odd hours, and I am honest that I am not looking for anything serious right now.",
+    "looking_for": "Something casual and fun with someone local. No long-term expectations on either side.",
+    "relationship_intent": "casual",
+    "region": "Austin",
+    "open_to_long_distance": false,
+    "interests": ["live music", "taco trucks", "late nights"],
+    "values": ["honesty", "spontaneity"],
+    "lifestyle": ["night owl", "service industry hours"],
+    "dealbreakers": ["people looking for marriage"]
+  },
+  "preferences": {
+    "age_min": 25,
+    "age_max": 38,
+    "gender": "man",
+    "accepted_genders": ["woman"],
+    "accepted_intents": ["casual"],
+    "same_region_only": true
+  },
+  "disclosable_facts": [
+    "Theo is only in Austin and not open to long distance.",
+    "Theo is only seeking casual connections right now."
+  ],
+  "decisions": {
+    "prefer_channel": "instagram",
+    "accept_channels": ["instagram"],
+    "counter_with": {},
+    "decline_all": false,
+    "propose_first": false,
+    "contacts": {
+      "email": "theo@example.com",
+      "instagram": "theo.example",
+      "phone": "+1-555-0104"
+    },
+    "followups": {}
+  },
+  "script": [
+    {
+      "kind": "answer",
+      "reply": "Theo here via my agent: I am only looking for something casual and local in Austin, so I am likely not your person's match. Wishing you both well!"
+    }
+  ]
+}

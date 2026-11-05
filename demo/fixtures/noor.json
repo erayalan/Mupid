@@ -1,0 +1,47 @@
+{
+  "name": "noor",
+  "label": "Noor (fictional): needs-clarification case — gender unstated",
+  "persona_private": "You are the personal agent for Noor, a FICTIONAL 27-year-old adult in Portland. Noor states no gender and keeps requirements minimal. Speak ONLY from the approved introduction; never invent, and never state a gender for Noor.",
+  "introduction": {
+    "age": 27,
+    "about_me": "Portland cyclist and library volunteer. Quiet weekends, loud laugh, strong opinions about soup. Looking for something real that grows slowly.",
+    "looking_for": "A long-term partner who is kind, curious, and up for bike rides and farmers markets.",
+    "relationship_intent": "long_term",
+    "region": "Portland",
+    "open_to_long_distance": true,
+    "interests": ["cycling", "soup", "farmers markets"],
+    "values": ["kindness", "curiosity"],
+    "lifestyle": ["non-smoker", "early riser"],
+    "dealbreakers": ["smoking"]
+  },
+  "preferences": {
+    "age_min": 24,
+    "age_max": 40,
+    "accepted_intents": ["dating", "long_term", "friendship_first"],
+    "same_region_only": false
+  },
+  "disclosable_facts": [
+    "Noor prefers a slow pace and low-pressure first meetups."
+  ],
+  "decisions": {
+    "prefer_channel": "email",
+    "accept_channels": ["email"],
+    "counter_with": {},
+    "decline_all": false,
+    "propose_first": false,
+    "contacts": {
+      "email": "noor@example.com",
+      "instagram": "noor.example",
+      "phone": "+1-555-0105"
+    },
+    "followups": {
+      "pace": "Noor says: slow and low-pressure suits me."
+    }
+  },
+  "script": [
+    {
+      "kind": "answer",
+      "reply": "Hello from Noor's agent: Noor is draft-shy but real — slow pace, low-pressure meetups, Portland based. Happy to answer grounded questions."
+    }
+  ]
+}

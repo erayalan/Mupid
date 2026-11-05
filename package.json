@@ -1,0 +1,39 @@
+{
+  "name": "mupit",
+  "version": "0.1.0",
+  "description": "Mupit, a matchmaker powered by Meta models: headless agent-to-agent matchmaking over MCP",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest run",
+    "dev": "tsx src/server.ts",
+    "start": "node dist/src/server.js",
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit",
+    "setup:local": "tsx scripts/setup-local.ts",
+    "seed:demo": "tsx scripts/seed-demo.ts",
+    "demo:up": "tsx scripts/demo-up.ts",
+    "demo:tunnel": "tsx scripts/demo-tunnel.ts",
+    "demo:tick": "tsx scripts/demo-tick.ts",
+    "demo": "tsx scripts/demo-flow.ts",
+    "demo:live": "tsx scripts/demo-live.ts",
+    "inspect:demo": "tsx scripts/inspect-demo.ts",
+    "demo:server": "MUPIT_PORT=3001 MUPIT_DB_PATH=demo/state/demo.db MUPIT_DEMO_MODE=1 tsx src/server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.1",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3",
+    "vitest": "4.0.18"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

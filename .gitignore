@@ -1,0 +1,22 @@
+# Dependencies and build output
+node_modules/
+dist/
+
+# Databases and secrets — NEVER commit
+data/
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+.server-secret
+.vault-key
+.env
+.env.local
+
+# Generated simulator state (tokens, cursors, transcripts with real inputs)
+demo/state/
+demo/*.log
+
+# OS / editor
+.DS_Store
+*.log

@@ -1,0 +1,33 @@
+{
+  "name": "alex-suggested",
+  "label": "SUGGESTED persona for the human demo player (register via real Muse; this file only suggests what to say)",
+  "note": "This persona is NOT seeded. The human player joins through real Muse and may adopt these answers (or use their own). Expected outcomes with these answers: Wren eligible/promising, Sam eligible/promising, Jules eligible-but-mismatch (discovered in conversation), Theo excluded by reciprocal filters, Noor listed under needs_clarification.",
+  "introduction": {
+    "age": 30,
+    "about_me": "Portland hiker and amateur photographer. I cook most nights, spend weekends outdoors, and guard my weeknight downtime. Non-smoker, remote worker, values independence and direct communication.",
+    "looking_for": "A long-term partner with their own passions. Different hobbies welcome — shared values matter more: independence, directness, kindness.",
+    "relationship_intent": "long_term",
+    "region": "Portland",
+    "open_to_long_distance": true,
+    "interests": ["hiking", "photography", "cooking"],
+    "values": ["independence", "direct communication", "curiosity"],
+    "lifestyle": ["non-smoker", "remote worker", "weekends outdoors"],
+    "dealbreakers": ["smoking", "seeking something casual only"]
+  },
+  "preferences": {
+    "age_min": 26,
+    "age_max": 38,
+    "gender": "woman",
+    "accepted_genders": ["man"],
+    "accepted_intents": ["dating", "long_term"],
+    "same_region_only": false
+  },
+  "if_your_agent_asks": {
+    "time_together": "About half and half: independent weeknights, shared weekends.",
+    "pace": "Steady and unhurried; meet in person within a few weeks if conversation goes well.",
+    "kids": "Unsure; prefer to discuss much later.",
+    "communication": "Brief daily texts; longer talks on weekends.",
+    "distance": "Open to Portland-Seattle weekends.",
+    "channel": "Start with Instagram; email is acceptable if countered. Approve ONLY the current proposal version after reading it."
+  }
+}

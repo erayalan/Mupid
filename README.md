@@ -65,15 +65,6 @@ The supplied Muse walkthrough shows the complete path from “help me find love�
 
 The other participants are fictional and fixture-controlled, with real Meta inference in live mode. The MCP service, persistence, mediation queue, and contact-release rules are implemented. The demo establishes that the workflow runs; it does not establish model accuracy or real-world dating outcomes. Reproduction steps are below, with [presentation assets](#demo-and-reviewer-resources) and a [reviewer guide](docs/reviewer-guide.md) for a closer look.
 
-## Evidence for the judging rubric
-
-| Criterion | What Mupid demonstrates | Where to inspect |
-|---|---|---|
-| Impact (30%) | Helps single adults delegate early introductions and clarify expectations in an existing agent chat; real-world benefit remains to be evaluated. | Experience and intended users above |
-| Use of Meta AI tooling (25%) | Built with Muse Code; Muse as the interface; Muse Spark through Meta Model API as the separate matchmaker and live simulated-agent reasoning. | Model roles above; `src/facilitator/`; `demo/agents/reasoning.ts` |
-| Technical depth and execution (20%) | Durable mediation jobs, stale-output rejection, pair-scoped model context, participant isolation, versioned approvals, and atomic encrypted contact release. | [Architecture](docs/architecture.md); `tests/`; validation below |
-| Demo (25%) | Supplied Muse walkthrough from approved profile to clarification and mutual contact exchange, plus reproducible live and mock modes. | Demo steps below; [background scenario](docs/background-demo.md); [reviewer guide](docs/reviewer-guide.md) |
-
 ## Run it
 
 Requires **Node.js 24+** and npm. SQLite uses Node's built-in `node:sqlite`; there is no separate database server to install.
@@ -160,8 +151,6 @@ Age is self-attested, and human approvals are reported by the personal agent; th
 - [Demo storyboard](docs/demo-script.md) — additional scenes, including mismatch and channel negotiation
 
 Built for the [Meta Global AI Developer Hackathon](https://cerebralvalley.ai/e/meta-ai-developer-hackathon/details). The project explores helping adults navigate introductions through personal agents, with Meta reasoning used for the conversation and explicit approval enforced in code. Real-world impact remains a hypothesis to test with users.
-
-The event's published project criteria are impact (30%), use of Meta AI tooling (25%), technical depth and execution (20%), and demo (25%). The experience, Meta integration, architecture, validation, and demo resources above provide the corresponding review evidence.
 
 ## License
 
